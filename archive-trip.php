@@ -58,7 +58,7 @@ require_once 'layouts/nav.php'; ?>
                     </div>
                     <div class="archive__card">
                         <a href="/profile.php">
-                            <div class="profile__gallery-online">
+                            <div class="profile__online">
                                 <div class="status"></div>
                                 <span>в сети</span>
                             </div>
@@ -77,7 +77,7 @@ require_once 'layouts/nav.php'; ?>
                     </div>
                     <div class="archive__card">
                         <a href="/profile.php">
-                            <div class="profile__gallery-online">
+                            <div class="profile__online">
                                 <div class="status"></div>
                                 <span>в сети</span>
                             </div>
@@ -142,7 +142,7 @@ require_once 'layouts/nav.php'; ?>
                     <span>2 колонки</span>
                     <div class="view__choice-btn">Выбрать</div>
                 </div>
-                <div class="view__choice-item" data-column="1">
+                <div class="view__choice-item js_view_one" data-column="1">
                     <img src="assets/files/icons/svg/icon--col-1.svg" alt="">
                     <span>1 колонка</span>
                     <div class="view__choice-btn">Выбрать</div>

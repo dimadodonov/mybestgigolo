@@ -4,9 +4,6 @@
             <div class="header__logo logo">
                 <a href="/"><img src="/assets/files/icons/svg/logo.svg" alt=""></a>
             </div>
-            <div class="header__search">
-                <img src="/assets/files/icons/svg/icon--search.svg" alt="">
-            </div>
             <div class="mob-menu">
                 <div id="hamburger__menu" class="hamburger__menu"></div>
             </div>
@@ -35,9 +32,14 @@
                 </div>
             </div>
 
-            <div class="header__auth auth">
-                <div class="btn signup" onclick="window.location='/auth-signup.php'">Регистрация</div>
-                <div class="btn btn-border" onclick="window.location='/auth-login.php'">Вход</div>
+            <div class="header__search">
+                <img src="/assets/files/icons/svg/icon--search.svg" alt="">
+                <ins>Поиск</ins>
+            </div>
+
+            <div class="btn-group">
+                <div class="btn btn-header-singup" onclick="window.location='/auth-signup.php'">Регистрация</div>
+                <div class="btn btn-header-singin" onclick="window.location='/auth-login.php'">Вход</div>
             </div>
         </div>
     </div>
@@ -1028,12 +1030,12 @@
                 <div class="archive__row">
                     <div class="archive__card">
                         <a href="/profile.php">
-                            <div class="profile__gallery-online">
+                            <div class="profile__online">
                                 <div class="status"></div>
                                 <span>в сети</span>
                             </div>
                             <div class="archive__card-title">
-                                <div class="archive__card-title-realphoto"><img src="/assets/files/icons/svg/icon--verified.svg" alt=""><span>Реальные фото</span></div>
+                                <div class="archive__card-title-realphoto"><span>Реальные фото</span></div>
                                 <div class="archive__card-title-wrap">
                                     <div class="archive__card-name"><span>Джон Кортахарена</span></div>
                                     <div class="archive__card-city">

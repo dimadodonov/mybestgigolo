@@ -33,14 +33,12 @@ const App = {
         this.Components.init();
     },
     auth() {
-        $document.on('click', '.page__auth-form-box-item', function() {
+        $document.on('click', '.page__auth-form-box-item', function () {
             $(this).addClass('active');
-            $(this)
-                .siblings()
-                .removeClass('active');
+            $(this).siblings().removeClass('active');
         });
 
-        $document.on('click', '.page__auth-form-next .btn', function() {
+        $document.on('click', '.page__auth-form-next .btn', function () {
             const dataBox = $(this).attr('data-box-next');
 
             $('#box-' + dataBox)
@@ -50,7 +48,7 @@ const App = {
         });
     },
     admin() {
-        $document.on('click', '.admin__profile-item-type span', function() {
+        $document.on('click', '.admin__profile-item-type span', function () {
             if ($('.admin__profile-item-type span').hasClass('on')) {
                 $('.admin__profile-item-type span').removeClass('on');
             }
@@ -67,19 +65,16 @@ const App = {
         $document.on(
             'click',
             '.admin__profile-item-type-wrap.on .admin__profile-item-type-option',
-            function() {
+            function () {
                 const itemTypeVal = $(this).attr('data-item-value');
-                $(this)
-                    .parent()
-                    .siblings('span')
-                    .text(itemTypeVal);
+                $(this).parent().siblings('span').text(itemTypeVal);
                 $('.admin__profile-item-type-wrap').removeClass('on');
                 $('.admin__profile-item-type span').removeClass('on');
             }
         );
     },
     header() {
-        $('a[href^="#"]').click(function() {
+        $('a[href^="#"]').click(function () {
             var offset = 70;
             $('html, body').animate(
                 {
@@ -95,7 +90,7 @@ const App = {
 
         var scrollPos = 0;
 
-        $window.scroll(function() {
+        $window.scroll(function () {
             var $header = $('.header').height();
             var sT = $(this).scrollTop();
 
@@ -118,15 +113,15 @@ const App = {
         });
     },
     menu() {
-        $('.mob-menu').on('click', function() {
+        $('.mob-menu').on('click', function () {
             $('.hamburger__menu').toggleClass('animate');
             $('.nav').toggle();
             $('.header__wrap').toggleClass('on');
         });
     },
     scrollbar() {
-        (function($) {
-            $(window).on('load', function() {
+        (function ($) {
+            $(window).on('load', function () {
                 $('.mCustomScrollbar').mCustomScrollbar({
                     autoHideScrollbar: true,
                 });
@@ -154,25 +149,23 @@ const App = {
         });
     },
     filter() {
-        $('.filter__show').on('click', function() {
+        $('.filter__show').on('click', function () {
             $('.filter').show();
         });
 
-        $('.filter__close').on('click', function() {
+        $('.filter__close').on('click', function () {
             $('.filter').hide();
         });
 
-        $('.select-text').on('click', function() {
+        $('.select-text').on('click', function () {
             $(this)
                 .parent('.filter__item.select')
                 .siblings()
                 .removeClass('active');
-            $(this)
-                .parent('.filter__item.select')
-                .toggleClass('active');
+            $(this).parent('.filter__item.select').toggleClass('active');
         });
 
-        $(document).on('click', function(e) {
+        $(document).on('click', function (e) {
             var div = $('.filter__item.select'); // тут указываем ID элемента
             if (
                 !div.is(e.target) && // если клик был не по нашему блоку
@@ -211,17 +204,17 @@ const App = {
         });
     },
     profile() {
-        $('#jsFavoriteBtn').on('click', function() {
+        $('#jsFavoriteBtn').on('click', function () {
             $(this).toggleClass('active');
         });
 
-        $('.btn-hide').on('click', function() {
+        $('.btn-hide').on('click', function () {
             $('.btn-hide span').text('Модель скрыта');
         });
     },
     archive() {
         if ($(window).width() <= 1040) {
-            $(document).on('click', '.view__choice-item', function() {
+            $(document).on('click', '.view__choice-item', function () {
                 const viewColumn = $(this).attr('data-column');
                 localStorage.setItem('viewcolumn', viewColumn);
 
@@ -229,18 +222,31 @@ const App = {
 
                 if ($(this).hasClass('js_view_two')) {
                     $('.archive__card').addClass('twocollumn');
-                    console.log('Выбрано отображение в две колонки');
                 } else {
                     $('.archive__card').removeClass('twocollumn');
-                    console.log('Выбрано отображение в одну колонку');
                 }
+
+                if ($(this).hasClass('js_view_one')) {
+                    $('.archive__card').removeClass('twocollumn');
+                } else {
+                    $('.archive__card').addClass('twocollumn');
+                }
+
+                if ($('.view__choice-item').hasClass('active')) {
+                    $('.view__choice-item').removeClass('active');
+                }
+
+                $(this).addClass('active');
             });
 
             if (localStorage.getItem('viewcolumn') !== null) {
                 if (localStorage.getItem('viewcolumn') == '2') {
                     $('.archive__card').addClass('twocollumn');
+                    $('.js_view_two').addClass('active');
+                    $('.js_view_one').removeClass('active');
                 } else {
-                    $('.archive__card').removeClass('twocollumn');
+                    $('.js_view_one').addClass('active');
+                    $('.js_view_two').removeClass('active');
                 }
             } else {
                 $('.view').show();
@@ -248,118 +254,82 @@ const App = {
         }
     },
     popup() {
-        $('#city').on('click', function() {
-            $('#city.country')
-                .addClass('on')
-                .show();
+        $('#city').on('click', function () {
+            $('#city.country').addClass('on').show();
             $('body').addClass('is-fixed');
         });
 
-        $('.country__close').on('click', function() {
-            $('.country')
-                .removeClass('on')
-                .hide();
+        $('.country__close').on('click', function () {
+            $('.country').removeClass('on').hide();
             $('body').removeClass('is-fixed');
         });
 
-        $('.country__item').on('click', function() {
-            $('.country')
-                .removeClass('on')
-                .hide();
+        $('.country__item').on('click', function () {
+            $('.country').removeClass('on').hide();
             $('body').removeClass('is-fixed');
         });
 
-        $('.edit-country').on('click', function() {
-            $('#city.country')
-                .removeClass('on')
-                .hide();
-            $('#country.country')
-                .addClass('on')
-                .show();
+        $('.edit-country').on('click', function () {
+            $('#city.country').removeClass('on').hide();
+            $('#country.country').addClass('on').show();
         });
 
-        $('#country').on('click', function() {
-            $('#country.country')
-                .addClass('on')
-                .show();
+        $('#country').on('click', function () {
+            $('#country.country').addClass('on').show();
             $('body').addClass('is-fixed');
         });
 
-        $('.country__close').on('click', function() {
-            $('.country')
-                .removeClass('on')
-                .hide();
+        $('.country__close').on('click', function () {
+            $('.country').removeClass('on').hide();
             $('body').removeClass('is-fixed');
         });
 
-        $('.country__item').on('click', function() {
-            $('.country')
-                .removeClass('on')
-                .hide();
+        $('.country__item').on('click', function () {
+            $('.country').removeClass('on').hide();
             $('body').removeClass('is-fixed');
         });
 
-        $('.header__search').on('click', function() {
-            $('.search')
-                .addClass('on')
-                .show();
+        $('.header__search').on('click', function () {
+            $('.search').addClass('on').show();
             $('body').addClass('is-fixed');
         });
-        $('.search__close').on('click', function() {
-            $('.search')
-                .removeClass('on')
-                .hide();
+        $('.search__close').on('click', function () {
+            $('.search').removeClass('on').hide();
             $('body').removeClass('is-fixed');
         });
 
-        $('.btn-mess').on('click', function() {
-            $('#popup__one')
-                .addClass('on')
-                .show();
+        $('.btn-mess').on('click', function () {
+            $('#popup__one').addClass('on').show();
             $('.popup__overlay').addClass('on');
         });
-        $('.btn-reviews').on('click', function() {
-            $('#popup__reviews')
-                .addClass('on')
-                .show();
+        $('.btn-reviews').on('click', function () {
+            $('#popup__reviews').addClass('on').show();
             $('.popup__overlay').addClass('on');
         });
-        $('.profile--addreview').on('click', function() {
-            $('#popup__reviews')
-                .addClass('on')
-                .show();
+        $('.profile--addreview').on('click', function () {
+            $('#popup__reviews').addClass('on').show();
             $('.popup__overlay').addClass('on');
         });
-        $('.profile--addnote').on('click', function() {
-            $('#popup__note')
-                .addClass('on')
-                .show();
+        $('.profile--addnote').on('click', function () {
+            $('#popup__note').addClass('on').show();
             $('.popup__overlay').addClass('on');
         });
-        $('.btn-beef').on('click', function() {
-            $('#popup__beef')
-                .addClass('on')
-                .show();
+        $('.btn-beef').on('click', function () {
+            $('#popup__beef').addClass('on').show();
             $('.popup__overlay').addClass('on');
         });
-        $('.btn-share').on('click', function() {
-            $('#popup__share')
-                .addClass('on')
-                .show();
+        $('.btn-share').on('click', function () {
+            $('#popup__share').addClass('on').show();
             $('.popup__overlay').addClass('on');
         });
 
-        $('.popup__close').on('click', function() {
-            $('.popup')
-                .removeClass('on')
-                .hide();
+        $('.popup__close').on('click', function () {
+            $('.popup').removeClass('on').hide();
             $('.popup__overlay').removeClass('on');
         });
-        $('.popup__overlay').on('click', function() {
+        $('.popup__overlay').on('click', function () {
             $(this).toggleClass('on');
-            $('.popup')
-                .removeClass('on')
-                .hide();
+            $('.popup').removeClass('on').hide();
         });
 
         function model_note() {
@@ -373,90 +343,83 @@ const App = {
             }
         }
 
-        $('.jsSaveNote').click(function() {
+        $('.jsSaveNote').click(function () {
             const popup__note = $('#popup__note textarea').val();
             localStorage.setItem('model_note', popup__note);
 
             $('.profile--addnote').addClass('on');
             $('.popup__overlay').toggleClass('on');
-            $('.popup')
-                .removeClass('on')
-                .hide();
+            $('.popup').removeClass('on').hide();
             $('.profile--note').show();
 
             model_note();
         });
 
-        $('.jsClearNote').click(function() {
+        $('.jsClearNote').click(function () {
             const popup__note = $('#popup__note textarea').val();
             localStorage.removeItem('model_note');
 
-            $('#popup__note textarea')
-                .val('')
-                .empty()
-                .change();
+            $('#popup__note textarea').val('').empty().change();
 
             $('.profile--addnote').removeClass('on');
             $('.profile--note').hide();
             $('.profile--note-p').text('');
             $('.popup__overlay').toggleClass('on');
-            $('.popup')
-                .removeClass('on')
-                .hide();
+            $('.popup').removeClass('on').hide();
         });
 
         model_note();
     },
     reviews() {
         if ($('.rating')) {
-            $('.stars_one').mouseover(function() {
+            $('.stars_one').mouseover(function () {
                 $(this).addClass('on');
             });
-            $('.stars_one').mouseout(function() {
+            $('.stars_one').mouseout(function () {
                 $(this).removeClass('on');
             });
 
-            $('.stars_two').mouseover(function() {
+            $('.stars_two').mouseover(function () {
                 $('.stars_one').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_two').mouseout(function() {
+            $('.stars_two').mouseout(function () {
                 $('.stars_one').removeClass('on');
                 $(this).removeClass('on');
             });
 
-            $('.stars_tree').mouseover(function() {
+            $('.stars_tree').mouseover(function () {
                 $('.stars_one').addClass('on');
                 $('.stars_two').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_tree').mouseout(function() {
+            $('.stars_tree').mouseout(function () {
                 $('.stars_one').removeClass('on');
                 $('.stars_two').removeClass('on');
                 $(this).removeClass('on');
             });
 
-            $('.stars_four').mouseover(function() {
+            $('.stars_four').mouseover(function () {
                 $('.stars_one').addClass('on');
                 $('.stars_two').addClass('on');
                 $('.stars_tree').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_four').mouseout(function() {
+            $('.stars_four').mouseout(function () {
                 $('.stars_one').removeClass('on');
                 $('.stars_two').removeClass('on');
                 $('.stars_tree').removeClass('on');
                 $(this).removeClass('on');
             });
 
-            $('.stars_five').mouseover(function() {
+            $('.stars_five').mouseover(function () {
                 $('.stars_one').addClass('on');
                 $('.stars_two').addClass('on');
                 $('.stars_tree').addClass('on');
                 $('.stars_four').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_five').mouseout(function() {
+            $('.stars_five').mouseout(function () {
                 $('.stars_one').removeClass('on');
                 $('.stars_two').removeClass('on');
                 $('.stars_tree').removeClass('on');
@@ -464,7 +427,7 @@ const App = {
                 $(this).removeClass('on');
             });
 
-            $('.stars_one').on('click', function() {
+            $('.stars_one').on('click', function () {
                 $('#reviews_stars').val('1');
                 $(this).addClass('active');
                 $('.stars_two').removeClass('active');
@@ -473,7 +436,7 @@ const App = {
                 $('.stars_five').removeClass('active');
             });
 
-            $('.stars_two').on('click', function() {
+            $('.stars_two').on('click', function () {
                 $('#reviews_stars').val('2');
                 $(this).addClass('active');
                 $('.stars_one').addClass('active');
@@ -482,7 +445,7 @@ const App = {
                 $('.stars_five').removeClass('active');
             });
 
-            $('.stars_tree').on('click', function() {
+            $('.stars_tree').on('click', function () {
                 $('#reviews_stars').val('3');
                 $(this).addClass('active');
                 $('.stars_one').addClass('active');
@@ -491,7 +454,7 @@ const App = {
                 $('.stars_five').removeClass('active');
             });
 
-            $('.stars_four').on('click', function() {
+            $('.stars_four').on('click', function () {
                 $('#reviews_stars').val('4');
                 $(this).addClass('active');
                 $('.stars_one').addClass('active');
@@ -500,7 +463,7 @@ const App = {
                 $('.stars_five').removeClass('active');
             });
 
-            $('.stars_five').on('click', function() {
+            $('.stars_five').on('click', function () {
                 $('#reviews_stars').val('5');
                 $(this).addClass('active');
                 $('.stars_one').addClass('active');
@@ -513,7 +476,7 @@ const App = {
     datetimepicker() {
         var checkbox = $('#checkbox_datetime');
 
-        checkbox.click(function() {
+        checkbox.click(function () {
             if ($(this).is(':checked')) {
                 $('.input__datetime').show();
             } else {
@@ -536,7 +499,7 @@ const App = {
             $('.attention').show();
             $('body').addClass('is-fixed');
         }
-        $('.attention_yes').click(function() {
+        $('.attention_yes').click(function () {
             localStorage.setItem('attention', 'yes');
             $('.attention').hide();
             $('body').removeClass('is-fixed');
@@ -544,7 +507,7 @@ const App = {
     },
 };
 
-App.define = function(namespace) {
+App.define = function (namespace) {
     var parts = namespace.split('.'),
         parent = App,
         i;
@@ -566,7 +529,7 @@ App.define = function(namespace) {
 
 //=include partials/Components.js
 
-$(function() {
+$(function () {
     App.init();
     svg4everybody();
 });

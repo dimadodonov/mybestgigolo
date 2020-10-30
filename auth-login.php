@@ -10,7 +10,7 @@
 <main class="main">
     <div class="container">
         <div class="page__auth-wrap">
-            <a href="/" class="auth__logo">
+            <a href="/" class="page__auth-logo">
                 <img src="/assets/files/icons/svg/logo.svg" alt="">
             </a>
             

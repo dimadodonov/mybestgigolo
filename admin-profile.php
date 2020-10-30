@@ -434,7 +434,7 @@ require_once 'layouts/nav.php';?>
 
                     <div class="col-12 col-md-12">
                         <div class="btn-group">
-                            <button class="btn btn-border">Сохранить</button>
+                            <button class="btn btn-accent">Сохранить</button>
                             <a href="/admin-profile-media.php" class="btn btn-nofocus">Добавить фото</a>
                         </div>
                     </div>

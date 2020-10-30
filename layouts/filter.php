@@ -399,13 +399,23 @@
             </div>
         </div>
         <div class="filter__choice">
-            <div class="btn btn-mess">Показать</div>
+            <div class="btn btn-accent">Показать</div>
         </div>
     </div>
 </div>
-<div class="filter__show">
-    <div class="filter__show-btn">
-        <svg><use xlink:href="/assets/files/sprite.svg#icon--filter"/></svg>
-        <span>Открыть фильтр</span>
+<div class="panel">
+    <div class="filter__show">
+        <div class="filter__show-btn">
+            <svg><use xlink:href="/assets/files/sprite.svg#icon--filter"/></svg>
+            <span>Открыть фильтр</span>
+        </div>
+    </div>
+    <div class="panel__grid">
+        <div class="panel__grid-item active view__choice-item js_view_two" data-column="2">
+            <img src="/assets/files/icons/svg/icon--grid.svg" alt="">
+        </div>
+        <div class="panel__grid-item view__choice-item js_view_one" data-column="1">
+            <img src="/assets/files/icons/svg/icon--grid-list.svg" alt="">
+        </div>
     </div>
 </div>

@@ -44,6 +44,42 @@
         }
     }
 
+    &-header {
+        display: flex;
+
+        &-singup {
+            display: inline-block;
+            min-width: auto;
+            margin-right: 15px;
+            padding: 0;
+            transition: $trs;
+            border-radius: 0;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.2);
+            font-family: $f-medium;
+            text-align: center;
+            cursor: pointer;
+            min-height: auto;
+
+            @include xs-block() {
+                min-width: auto;
+                padding: 10px 15px;
+                font-size: 14px;
+                min-height: 40px;
+            }
+        }
+
+        &-singin {
+            min-width: 90px;
+            padding: 15px 28px;
+            color: $color-accent;
+
+            &.color-accent {
+                color: $color-accent;
+            }
+        }
+    }
+
     &-nofocus {
         color: rgba(255, 255, 255, 0.3);
 

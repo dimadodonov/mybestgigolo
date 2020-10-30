@@ -34,14 +34,15 @@
     &__bage {
         position: absolute;
         top: 30px;
-        left: -10px;
+        left: -7px;
         z-index: 90;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+
         @include sm-block() {
-            right: 0px;
+            left: 0px;
         }
 
         &-item {
@@ -56,13 +57,13 @@
             &::before {
                 content: '';
                 position: absolute;
-                right: 0;
                 bottom: 100%;
+                left: 0;
                 width: 0;
                 height: 0;
                 border-width: 0 0 4px 7px;
                 border-style: solid;
-                border-left-color: #313131 transparent transparent;
+                border-left-color: transparent transparent #313131;
 
                 @include xs-block() {
                     display: none;
@@ -76,7 +77,7 @@
                 background-color: #804a95;
 
                 &::before {
-                    border-color: #653478 transparent transparent;
+                    border-color: transparent transparent #653478;
                 }
 
                 .icon {
@@ -93,7 +94,7 @@
                 background-color: #f33e3e;
 
                 &::before {
-                    border-color: #c0272d transparent transparent;
+                    border-color: transparent transparent #c0272d;
                 }
             }
 
@@ -101,7 +102,7 @@
                 background-color: #5cb2f2;
 
                 &::before {
-                    border-color: #3e8cc6 transparent transparent;
+                    border-color: transparent transparent #3e8cc6;
                 }
             }
 
@@ -109,7 +110,7 @@
                 background-color: #f3853d;
 
                 &::before {
-                    border-color: #cb6b2d transparent transparent;
+                    border-color: transparent transparent #cb6b2d;
                 }
             }
 
@@ -123,6 +124,29 @@
             & + .profile__bage-item {
                 margin-top: 4px;
             }
+        }
+    }
+
+    &__online {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+
+        .status {
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            border-radius: 5px;
+            background-color: #1dcb55;
+        }
+
+        span {
+            color: #1dcb55;
+            font-family: $f-medium;
+            font-size: 14px;
         }
     }
 
@@ -363,9 +387,16 @@
             small {
                 opacity: 0.5;
                 margin-left: 15px;
+                transition: $trs;
                 color: #fff;
                 font-size: 14px;
                 line-height: 17px;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                    color: $color-accent;
+                }
             }
         }
     }

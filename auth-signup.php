@@ -10,13 +10,13 @@
 <main class="main">
     <div class="container">
         <div class="page__auth-wrap">
-            <a href="/" class="auth__logo">
+            <a href="/" class="page__auth-logo">
                 <img src="/assets/files/icons/svg/logo.svg" alt="">
             </a>
 
             <div class="page__auth-form singup">
                 <form>
-                    <div id="box-1" class="page__auth-form-box" style="display:none;">
+                    <div id="box-1" class="page__auth-form-box">
                         <div class="page__auth-title">
                             Кто вы?
                         </div>
@@ -56,7 +56,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="box-2" class="page__auth-form-box" style="display: none1;">
+                    <div id="box-2" class="page__auth-form-box" style="display:none;">
                         <div class="page__auth-title">
                             Вы будете зарегистрированы как Модель
                         </div>

@@ -1,10 +1,11 @@
 .header {
     position: relative;
-    padding: 50px 0;
+    padding: 30px 0;
     background-color: #000;
 
     @include xs-block() {
-        padding: 25px 0;
+        margin: 10px 0;
+        padding: 30px 0;
     }
 
     &__logo {
@@ -45,7 +46,7 @@
         }
 
         @include xs-block() {
-            padding-top: 10px;
+            padding-top: 60px;
         }
 
         &.on {
@@ -107,12 +108,34 @@
     &__search {
         position: absolute;
         top: 50%;
-        margin-left: 320px;
+        right: 280px;
+        display: flex;
         transform: translateY(-50%);
+        cursor: pointer;
 
         @include md-block() {
             right: 15px;
             margin-left: 0;
+        }
+
+        &:hover img,
+        &:hover ins {
+            opacity: 1;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        img {
+            opacity: 0.3;
+            width: 24px;
+            height: 24px;
+            transition: $trs;
+        }
+
+        ins {
+            margin-left: 15px;
+            transition: $trs;
+            color: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
         }
     }
 
@@ -163,5 +186,14 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .btn-group {
+        display: flex;
+        align-items: center;
     }
 }

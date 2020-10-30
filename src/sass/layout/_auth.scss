@@ -250,4 +250,10 @@
         align-items: center;
         justify-content: center;
     }
+
+    &-logo {
+        @include xs-block() {
+            width: 132px;
+        }
+    }
 } // .auth
