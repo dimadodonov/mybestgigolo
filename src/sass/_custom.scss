@@ -1,0 +1,110 @@
+.swiper {
+    position: relative;
+
+    &-btn {
+        position: relative;
+
+        &-next,
+        &-prev {
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            transform: translateY(-50%);
+            background: #0d0e10;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 16px;
+                height: 16px;
+                transform: translate(-50%, -50%);
+                background-image: url('/assets/files/icons/svg/icon--arrow-next.svg');
+                background-size: cover;
+            }
+        }
+
+        &-next {
+            right: 10px;
+
+            &::before {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-prev {
+            left: 10px;
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.3 !important;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    opacity: 0.7;
+    background-color: $color-accent;
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: $color-accent;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    opacity: 1;
+    background-color: $color-accent;
+}
+
+.mCSB_inside > .mCSB_container {
+    margin-right: 0px;
+}
+
+.mCSB_scrollTools {
+    right: 5px;
+}
+
+.share {
+    position: relative;
+
+    &-popup {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-item {
+        @include xs-block() {
+            margin-bottom: 10px;
+        }
+
+        img {
+            display: block;
+            width: 52px;
+            height: 52px;
+
+            @include xs-block() {
+                width: 36px;
+                height: 36px;
+            }
+
+            @include i5-block() {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        & + .share-item {
+            margin-left: 10px;
+        }
+    }
+} // .share

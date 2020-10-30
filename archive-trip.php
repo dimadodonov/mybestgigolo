@@ -37,7 +37,6 @@ require_once 'layouts/nav.php'; ?>
                     <div class="archive__card">
                         <a href="/profile.php">
                             <div class="archive__card-title">
-                                <div class="archive__card-title-realphoto"><span>Реальные фото</span></div>
                                 <div class="archive__card-title-wrap">
                                     <div class="archive__card-name"><span>Джон Кортахарена</span></div>
                                     <div class="archive__card-city">
@@ -48,17 +47,8 @@ require_once 'layouts/nav.php'; ?>
                             <div class="archive__card-thumb">
                                 
                                 <div class="profile__bage">
-                                    <div class="profile__bage-item pornstar">
-                                        <span>PORN STAR</span>
-                                    </div>
                                     <div class="profile__bage-item new">
                                         <span>new</span>
-                                    </div>
-                                    <div class="profile__bage-item top">
-                                        <span>top</span>
-                                    </div>
-                                    <div class="profile__bage-item vip">
-                                        <span>vip</span>
                                     </div>
                                 </div>
 
@@ -68,6 +58,10 @@ require_once 'layouts/nav.php'; ?>
                     </div>
                     <div class="archive__card">
                         <a href="/profile.php">
+                            <div class="profile__gallery-online">
+                                <div class="status"></div>
+                                <span>в сети</span>
+                            </div>
                             <div class="archive__card-title">
                                 <div class="archive__card-title-wrap">
                                     <div class="archive__card-name"><span>Джон Кортахарена</span></div>
@@ -77,44 +71,16 @@ require_once 'layouts/nav.php'; ?>
                                 </div>
                             </div>
                             <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item top">
-                                        <span>top</span>
-                                    </div>
-                                    <div class="profile__bage-item vip">
-                                        <span>vip</span>
-                                    </div>
-                                </div>
-
-                                <img src="/assets/images/page/model/model-1.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="archive__card">
-                        <a href="/profile.php">
-                            <div class="archive__card-title">
-                                <div class="archive__card-title-wrap">
-                                    <div class="archive__card-name"><span>Джон Кортахарена</span></div>
-                                    <div class="archive__card-city">
-                                        Россия (Москва)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item new">
-                                        <span>new</span>
-                                    </div>
-                                </div>
-
                                 <img src="/assets/images/page/model/model-3.jpg" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="archive__card">
                         <a href="/profile.php">
+                            <div class="profile__gallery-online">
+                                <div class="status"></div>
+                                <span>в сети</span>
+                            </div>
                             <div class="archive__card-title">
                                 <div class="archive__card-title-wrap">
                                     <div class="archive__card-name"><span>Джон Кортахарена</span></div>
@@ -124,132 +90,6 @@ require_once 'layouts/nav.php'; ?>
                                 </div>
                             </div>
                             <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item pornstar">
-                                        <span>PORN STAR</span>
-                                    </div>
-                                    <div class="profile__bage-item new">
-                                        <span>new</span>
-                                    </div>
-                                </div>
-
-                                <img src="/assets/images/page/model/model-4.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="archive__card">
-                        <a href="/profile.php">
-                            <div class="archive__card-title">
-                                <div class="archive__card-title-wrap">
-                                    <div class="archive__card-name"><span>Джон Кортахарена</span></div>
-                                    <div class="archive__card-city">
-                                        Россия (Москва)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item new">
-                                        <span>new</span>
-                                    </div>
-                                    <div class="profile__bage-item vip">
-                                        <span>vip</span>
-                                    </div>
-                                </div>
-
-                                <img src="/assets/images/page/model/model-5.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="archive__card">
-                        <a href="/profile.php">
-                            <div class="archive__card-title">
-                                <div class="archive__card-title-wrap">
-                                    <div class="archive__card-name"><span>Джон Кортахарена</span></div>
-                                    <div class="archive__card-city">
-                                        Россия (Москва)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item new">
-                                        <span>new</span>
-                                    </div>
-                                </div>
-
-                                <img src="/assets/images/page/model/model-6.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="archive__card">
-                        <a href="/profile.php">
-                            <div class="archive__card-title">
-                                <div class="archive__card-title-wrap">
-                                    <div class="archive__card-name"><span>Джон Кортахарена</span></div>
-                                    <div class="archive__card-city">
-                                        Россия (Москва)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item vip">
-                                        <span>vip</span>
-                                    </div>
-                                </div>
-
-                                <img src="/assets/images/page/model/model-1.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="archive__card">
-                        <a href="/profile.php">
-                            <div class="archive__card-title">
-                                <div class="archive__card-title-wrap">
-                                    <div class="archive__card-name"><span>Джон Кортахарена</span></div>
-                                    <div class="archive__card-city">
-                                        Россия (Москва)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item top">
-                                        <span>top</span>
-                                    </div>
-                                </div>
-
-                                <img src="/assets/images/page/model/model-2.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="archive__card">
-                        <a href="/profile.php">
-                            <div class="archive__card-title">
-                                <div class="archive__card-title-wrap">
-                                    <div class="archive__card-name"><span>Джон Кортахарена</span></div>
-                                    <div class="archive__card-city">
-                                        Россия (Москва)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="archive__card-thumb">
-                                
-                                <div class="profile__bage">
-                                    <div class="profile__bage-item new">
-                                        <span>new</span>
-                                    </div>
-                                    <div class="profile__bage-item vip">
-                                        <span>vip</span>
-                                    </div>
-                                </div>
-
                                 <img src="/assets/images/page/model/model-3.jpg" alt="">
                             </div>
                         </a>
