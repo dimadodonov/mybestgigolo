@@ -79,7 +79,7 @@
         "gulp4-run-sequence": "^1.0.1",
         "husky": "^4.3.0",
         "inputmask": "^5.0.5",
-        "lint-staged": "^10.5.0",
+        "lint-staged": "^10.5.1",
         "path": "^0.12.7",
         "prettier": "^2.1.2",
         "require-dir": "^1.2.0",
@@ -100,6 +100,6 @@
         "jquery.equalheights": "^1.5.3",
         "malihu-custom-scrollbar-plugin": "^3.1.5",
         "svg4everybody": "^2.1.9",
-        "swiper": "^6.3.4"
+        "swiper": "^6.3.5"
     }
 }
