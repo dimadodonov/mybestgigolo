@@ -26,6 +26,7 @@ const App = {
         this.slider();
         this.profile();
         this.archive();
+        this.premium();
         this.popup();
         this.reviews();
         this.datetimepicker();
@@ -252,6 +253,31 @@ const App = {
                 $('.view').show();
             }
         }
+    },
+    premium() {
+        $('.pricing__switch-item').on('click', function () {
+            if ($('.pricing__switch-item').hasClass('pricing__switch-active')) {
+                $('.pricing__switch-item').removeClass(
+                    'pricing__switch-active'
+                );
+            }
+            $(this).addClass('pricing__switch-active');
+
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $('.pricing__switch-overlay').css({
+                opacity: 1,
+                left: +position.left,
+                width: width,
+            });
+        });
+
+        var currentWidth = $('.pricing__switch-active').parent('li').width();
+        var current = $('.pricing__switch-active').position();
+        $('.pricing__switch-overlay').css({
+            left: +current.left,
+            width: currentWidth,
+        });
     },
     popup() {
         $('#city').on('click', function () {

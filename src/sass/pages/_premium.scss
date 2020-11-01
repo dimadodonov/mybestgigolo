@@ -15,6 +15,10 @@
         filter: blur(100px);
     }
 
+    &-wrap {
+        position: relative;
+    }
+
     h1 {
         margin-top: 80px;
         color: $color-accent;
@@ -46,26 +50,42 @@
     &__switch {
         display: flex;
         justify-content: center;
+        margin: 30px 0;
 
         &-wrap {
+            position: relative;
             display: flex;
             border-radius: 24.5px;
             background: rgba(255, 255, 255, 0.1);
         }
 
         &-item {
+            position: relative;
+            z-index: 2;
             padding: 15px 30px;
+            transition: $trs;
             border-radius: 24.5px;
             font-family: $f-medium;
             font-size: 16px;
             line-height: 19px;
-            text-align: center;
-            cursor: e-resize;
+            cursor: pointer;
         }
 
         &-active {
-            background: #ffbc3f;
             color: #000;
         }
+
+        &-overlay {
+            position: absolute;
+            height: 100%;
+            padding: 15px 30px;
+            transition: $trs;
+            border-radius: 24.5px;
+            background: #ffbc3f;
+        }
+    }
+
+    &__grid {
+        position: relative;
     }
 }
