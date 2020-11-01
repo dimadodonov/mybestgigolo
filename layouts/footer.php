@@ -44,6 +44,9 @@
                     <div class="footer__nav-title">О нас</div>
                     <ul>
                         <li>
+                            <a href="/page-premium.php">Премиум аккаунт</a>
+                        </li>
+                        <li>
                             <a href="">Условия использования</a>
                         </li>
                         <li>
