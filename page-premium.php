@@ -45,17 +45,126 @@ require_once 'layouts/nav.php'; ?>
             </section>
             <section>
                 <div class="container">
+                    <div class="pricing__switch">
+                        <ul class="pricing__switch-wrap">
+                            <li>
+                                <div class="pricing__switch-item pricing__switch-active pricing__switch-mont" data-switch="mont">месяц</div>
+                            </li>
+                            <li>
+                                <div class="pricing__switch-item pricing__switch-year" data-switch="year">год</div>
+                            </li>
+                            <div class="pricing__switch-overlay"></div>
+                        </ul>
+                    </div>
                     <div class="pricing__grid">
-                        <div class="pricing__switch">
-                            <ul class="pricing__switch-wrap">
-                                <li>
-                                    <div class="pricing__switch-item pricing__switch-active pricing__switch-mont">Месяц</div>
-                                </li>
-                                <li>
-                                    <div class="pricing__switch-item pricing__switch-year">Год</div>
-                                </li>
-                                <div class="pricing__switch-overlay"></div>
-                            </ul>
+                        <div class="pricing__grid-item">
+                            <div>
+                                <div class="pricing__grid-item-price">
+                                    <span class="price price-mont price-active">
+                                        $<ins>9.99</ins>
+                                    </span>
+                                    <span class="price price-year">
+                                        $<ins>108</ins>
+                                    </span>
+                                    <span class="symbol">
+                                        /<small>месяц</small>
+                                    </span>
+                                </div>
+                                <div class="pricing__grid-item-name">Lite</div>
+                                <div class="pricing__grid-item-desc">Настоящие отзывы от реальных пользователей о парнях</div>
+                                <div class="pricing__grid-item-edge">
+                                    <ul>
+                                        <li>Какое-то преимущество</li>
+                                        <li>Какое-то преимущество</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pricing__grid-item-choice">
+                                <button class="btn btn-radius">Выберите план</button>
+                            </div>
+                        </div>
+                        <div class="pricing__grid-item pricing__grid-active">
+                            <div class="pricing__grid-item-hit">Самый популярный</div>
+                            <div>
+                                <div class="pricing__grid-item-price">
+                                    <span class="price price-mont price-active">
+                                        $<ins>100</ins>
+                                    </span>
+                                    <span class="price price-year">
+                                        $<ins>1200</ins>
+                                    </span>
+                                    <span class="symbol">
+                                        /<small>месяц</small>
+                                    </span>
+                                </div>
+                                <div class="pricing__grid-item-name">Pro</div>
+                                <div class="pricing__grid-item-desc">Настоящие отзывы от реальных пользователей о парнях</div>
+                                <div class="pricing__grid-item-edge">
+                                    <ul>
+                                        <li>Какое-то преимущество</li>
+                                        <li>Какое-то преимущество</li>
+                                        <li>Какое-то преимущество</li>
+                                        <li>Какое-то преимущество</li>
+                                        <li>Какое-то преимущество</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pricing__grid-item-choice">
+                                <button class="btn btn-radius">Выберите план</button>
+                            </div>
+                        </div>
+                        <div class="pricing__grid-item">
+                            <div class="pricing__grid-item-price">
+                                <span class="price price-mont price-active">
+                                    $<ins>15</ins>
+                                </span>
+                                <span class="price price-year">
+                                    $<ins>180</ins>
+                                </span>
+                                <span class="symbol">
+                                    /<small>месяц</small>
+                                </span>
+                            </div>
+                            <div class="pricing__grid-item-name">Premium</div>
+                            <div class="pricing__grid-item-desc">Настоящие отзывы от реальных пользователей о парнях</div>
+                            <div class="pricing__grid-item-edge">
+                                <ul>
+                                    <li>Какое-то преимущество</li>
+                                    <li>Какое-то преимущество</li>
+                                    <li>Какое-то преимущество</li>
+                                    <li>Какое-то преимущество</li>
+                                </ul>
+                            </div>
+                            <div class="pricing__grid-item-choice">
+                                <button class="btn btn-radius">Выберите план</button>
+                            </div>
+                        </div>
+                        <div class="pricing__grid-item" style="display: none;">
+                            <div class="pricing__grid-item-price">
+                                <span class="price price-mont price-active">
+                                    $<ins>99</ins>
+                                </span>
+                                <span class="price price-year">
+                                    $<ins>1188</ins>
+                                </span>
+                                <span class="symbol">
+                                    /<small>месяц</small>
+                                </span>
+                            </div>
+                            <div class="pricing__grid-item-name">Other</div>
+                            <div class="pricing__grid-item-desc">Настоящие отзывы от реальных пользователей о парнях</div>
+                            <div class="pricing__grid-item-edge">
+                                <ul>
+                                    <li>Какое-то преимущество</li>
+                                    <li>Какое-то преимущество</li>
+                                    <li>Какое-то преимущество</li>
+                                    <li>Какое-то преимущество</li>
+                                    <li>Какое-то преимущество</li>
+                                </ul>
+                            </div>
+                            <div class="pricing__grid-item-choice">
+                                <a href="#" class="btn btn-radius">Выберите план</a>
+                            </div>
                         </div>
                     </div>
                 </div>

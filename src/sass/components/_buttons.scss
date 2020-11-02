@@ -114,6 +114,11 @@
         }
     }
 
+    &-radius {
+        transition: $trs;
+        border-radius: 25px;
+    }
+
     &-signin {
     }
 
