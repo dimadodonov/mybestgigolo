@@ -139,7 +139,7 @@ require_once 'layouts/nav.php'; ?>
                                 <button class="btn btn-radius">Выберите план</button>
                             </div>
                         </div>
-                        <div class="pricing__grid-item" style="display: none;">
+                        <div class="pricing__grid-item">
                             <div class="pricing__grid-item-price">
                                 <span class="price price-mont price-active">
                                     $<ins>99</ins>
