@@ -32,6 +32,10 @@
         &-next {
             right: -54px;
 
+            @include lg-block() {
+                right: 0px;
+            }
+
             &::before {
                 transform: translate(-50%, -50%);
             }
@@ -39,6 +43,10 @@
 
         &-prev {
             left: -54px;
+
+            @include lg-block() {
+                left: 0px;
+            }
 
             &::before {
                 transform: translate(-50%, -50%) rotate(180deg);

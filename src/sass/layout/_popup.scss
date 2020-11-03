@@ -133,9 +133,14 @@
             line-height: 150%;
         }
 
+        .textarea {
+            position: relative;
+        }
+
         textarea {
             width: 100%;
             height: auto;
+            padding-right: 110px;
             border: none;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 3px;

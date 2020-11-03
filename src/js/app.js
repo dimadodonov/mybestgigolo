@@ -75,7 +75,7 @@ const App = {
         );
     },
     header() {
-        $('a[href^="#"]').click(function () {
+        $('a[href^="#"]').on('click', function () {
             var offset = 70;
             $('html, body').animate(
                 {
@@ -186,6 +186,20 @@ const App = {
                 nextEl: '.swiper-btn-next',
                 prevEl: '.swiper-btn-prev',
             },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 1,
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 3,
+                },
+            },
         });
 
         var swiper = new Swiper('.page-news-slider', {
@@ -216,7 +230,7 @@ const App = {
         });
     },
     profile() {
-        $('#jsFavoriteBtn').on('click', function () {
+        $('.jsBtnFavorite').on('click', function () {
             $(this).toggleClass('active');
         });
 
@@ -266,44 +280,54 @@ const App = {
         }
     },
     premium() {
-        $('.pricing__switch-item').on('click', function () {
-            if ($('.pricing__switch-item').hasClass('pricing__switch-active')) {
-                $('.pricing__switch-item').removeClass(
-                    'pricing__switch-active'
-                );
-            }
-            $(this).addClass('pricing__switch-active');
+        if ($('.pricing__switch').length) {
+            $('.pricing__switch-item').on('click', function () {
+                if (
+                    $('.pricing__switch-item').hasClass(
+                        'pricing__switch-active'
+                    )
+                ) {
+                    $('.pricing__switch-item').removeClass(
+                        'pricing__switch-active'
+                    );
+                }
+                $(this).addClass('pricing__switch-active');
 
-            var position = $(this).parent().position();
-            var width = $(this).parent().width();
-            $('.pricing__switch-overlay').css({
-                opacity: 1,
-                left: +position.left,
-                width: width,
+                var position = $(this).parent().position();
+                var width = $(this).parent().width();
+                $('.pricing__switch-overlay').css({
+                    opacity: 1,
+                    left: +position.left,
+                    width: width,
+                });
+
+                const $switch = $(this).attr('data-switch');
+                const $switchTitle = $(this).text();
+                if (
+                    $('.pricing__grid-item-price .price').hasClass(
+                        'price-active'
+                    )
+                ) {
+                    $('.pricing__grid-item-price .price')
+                        .hide()
+                        .removeClass('price-active');
+                }
+
+                $('.pricing__grid-item-price small').text($switchTitle);
+                $('.pricing__grid-item-price .price-' + $switch)
+                    .show()
+                    .addClass('price-active');
             });
 
-            const $switch = $(this).attr('data-switch');
-            const $switchTitle = $(this).text();
-            if (
-                $('.pricing__grid-item-price .price').hasClass('price-active')
-            ) {
-                $('.pricing__grid-item-price .price')
-                    .hide()
-                    .removeClass('price-active');
-            }
-
-            $('.pricing__grid-item-price small').text($switchTitle);
-            $('.pricing__grid-item-price .price-' + $switch)
-                .show()
-                .addClass('price-active');
-        });
-
-        var currentWidth = $('.pricing__switch-active').parent('li').width();
-        var current = $('.pricing__switch-active').position();
-        $('.pricing__switch-overlay').css({
-            left: +current.left,
-            width: currentWidth,
-        });
+            var currentWidth = $('.pricing__switch-active')
+                .parent('li')
+                .width();
+            var current = $('.pricing__switch-active').position();
+            $('.pricing__switch-overlay').css({
+                left: +current.left,
+                width: currentWidth,
+            });
+        }
     },
     popup() {
         $('#city').on('click', function () {
@@ -350,7 +374,7 @@ const App = {
             $('body').removeClass('is-fixed');
         });
 
-        $('.btn-mess').on('click', function () {
+        $('.jsBtnMessage').on('click', function () {
             $('#popup__one').addClass('on').show();
             $('.popup__overlay').addClass('on');
         });
@@ -386,36 +410,38 @@ const App = {
 
         function model_note() {
             if (localStorage.getItem('model_note') !== null) {
-                $('.profile--addnote').addClass('on');
-                $('.profile--note').show();
+                $('.profile--addnote').addClass('on').text('Изменить заметку');
+                $('.profile__quote').show();
                 $('#popup__note textarea').val(
                     localStorage.getItem('model_note')
                 );
-                $('.profile--note-p').text(localStorage.getItem('model_note'));
+                $('.profile__quote-p').text(localStorage.getItem('model_note'));
+            } else {
+                $('.profile--addnote').text('Добавить заметку');
             }
         }
 
-        $('.jsSaveNote').click(function () {
+        $('.jsSaveNote').on('click', function () {
             const popup__note = $('#popup__note textarea').val();
             localStorage.setItem('model_note', popup__note);
 
-            $('.profile--addnote').addClass('on');
+            $('.profile--addnote').addClass('on').text('Изменить заметку');
             $('.popup__overlay').toggleClass('on');
             $('.popup').removeClass('on').hide();
-            $('.profile--note').show();
+            $('.profile__quote').show();
 
             model_note();
         });
 
-        $('.jsClearNote').click(function () {
+        $('.jsClearNote').on('click', function () {
             const popup__note = $('#popup__note textarea').val();
             localStorage.removeItem('model_note');
 
             $('#popup__note textarea').val('').empty().change();
 
-            $('.profile--addnote').removeClass('on');
-            $('.profile--note').hide();
-            $('.profile--note-p').text('');
+            $('.profile--addnote').removeClass('on').text('Добавить заметку');
+            $('.profile__quote').hide();
+            $('.profile__quote-p').text('');
             $('.popup__overlay').toggleClass('on');
             $('.popup').removeClass('on').hide();
         });
@@ -424,54 +450,54 @@ const App = {
     },
     reviews() {
         if ($('.rating')) {
-            $('.stars_one').mouseover(function () {
+            $('.stars_one').on('mouseover', function () {
                 $(this).addClass('on');
             });
-            $('.stars_one').mouseout(function () {
+            $('.stars_one').on('mouseout', function () {
                 $(this).removeClass('on');
             });
 
-            $('.stars_two').mouseover(function () {
+            $('.stars_two').on('mouseover', function () {
                 $('.stars_one').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_two').mouseout(function () {
+            $('.stars_two').on('mouseout', function () {
                 $('.stars_one').removeClass('on');
                 $(this).removeClass('on');
             });
 
-            $('.stars_tree').mouseover(function () {
+            $('.stars_tree').on('mouseover', function () {
                 $('.stars_one').addClass('on');
                 $('.stars_two').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_tree').mouseout(function () {
+            $('.stars_tree').on('mouseout', function () {
                 $('.stars_one').removeClass('on');
                 $('.stars_two').removeClass('on');
                 $(this).removeClass('on');
             });
 
-            $('.stars_four').mouseover(function () {
+            $('.stars_four').on('mouseover', function () {
                 $('.stars_one').addClass('on');
                 $('.stars_two').addClass('on');
                 $('.stars_tree').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_four').mouseout(function () {
+            $('.stars_four').on('mouseout', function () {
                 $('.stars_one').removeClass('on');
                 $('.stars_two').removeClass('on');
                 $('.stars_tree').removeClass('on');
                 $(this).removeClass('on');
             });
 
-            $('.stars_five').mouseover(function () {
+            $('.stars_five').on('mouseover', function () {
                 $('.stars_one').addClass('on');
                 $('.stars_two').addClass('on');
                 $('.stars_tree').addClass('on');
                 $('.stars_four').addClass('on');
                 $(this).addClass('on');
             });
-            $('.stars_five').mouseout(function () {
+            $('.stars_five').on('mouseout', function () {
                 $('.stars_one').removeClass('on');
                 $('.stars_two').removeClass('on');
                 $('.stars_tree').removeClass('on');
@@ -528,10 +554,11 @@ const App = {
     datetimepicker() {
         var checkbox = $('#checkbox_datetime');
 
-        checkbox.click(function () {
+        checkbox.on('click', function () {
             if ($(this).is(':checked')) {
                 $('.input__datetime').show();
             } else {
+                $('.input__datetime').hide();
             }
         });
 
@@ -551,7 +578,7 @@ const App = {
             $('.attention').show();
             $('body').addClass('is-fixed');
         }
-        $('.attention_yes').click(function () {
+        $('.attention_yes').on('click', function () {
             localStorage.setItem('attention', 'yes');
             $('.attention').hide();
             $('body').removeClass('is-fixed');

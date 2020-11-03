@@ -133,36 +133,156 @@ require_once 'layouts/nav.php'; ?>
         <div class="profile__btn">
             <div class="container">
                 <div class="profile__btn-row">
-                    <div>
-                        <div class="btn-mess">Отправить сообщение</div>
-                        <div class="btn-favorite"></div>
+                    <div class="profile__btn-col">
+                        <div class="btn btn-accent btn-mess jsBtnMessage">Отправить сообщение</div>
+                        <div class="btn-favorite jsBtnFavorite"></div>
                     </div>
-                    <div>
-                        <div class="btn-reviews">Оставить отзыв</div>
-                        <div class="btn-hide">Скрыть модель</div>
+                    <div class="profile__btn-col">
+                        <div class="btn btn-icon btn-reviews">
+                            <svg><use xlink:href="/assets/files/sprite.svg#icon--like"/></svg>
+                            <span>Оставить отзыв</span>            
+                        </div>
+                        <div class="btn btn-icon btn-hide">
+                            <svg><use xlink:href="/assets/files/sprite.svg#icon--hide"/></svg>
+                            <span>Скрыть модель</span>
+                        </div>
                     </div>
-                    <div>
-                        <div class="">Изменить заметку</div>
-                        <div class="btn-beef">Пожаловаться</div>
+                    <div class="profile__btn-col">
+                        <div class="btn-quote profile--addnote">Добавить заметку</div>
+                        <div class="btn-beef">
+                            <div class="icon"></div>
+                            <span>Пожаловаться</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="profile__quote">
-            <div class="container">
-                <p>Если честно, то я скептически отношусь к подобного рода предложениям…</p>
+        <div class="container">
+            <div class="profile__quote" style="display: none;">
+                <div class="profile__quote-p"></div>
+                <div class="profile__quote-info">Видно только вам</div>
             </div>
         </div>
     </section>
-    <section class="profile__price">
+    <section class="profile__section">
         <div class="container">
-            <div class="profile__section-title">profile__price</div>
+            <div class="profile__section-row justify-content">
+                <div class="profile__section-col-2">
+                    <div class="profile__price">
+                        <div class="profile__price-row">
+                            <div class="profile__price-title">Тарифы:</div>
+                            <div class="profile__price-item">
+                                <span>1 час</span>
+                                <strong>400 USD</strong>
+                            </div>
+                            <div class="profile__price-item">
+                                <span>2 часа</span>
+                                <strong>500 USD</strong>
+                            </div>
+                            <div class="profile__price-item">
+                                <span>3 часа</span>
+                                <strong>570 USD</strong>
+                            </div>
+                            <div class="profile__price-item">
+                                <span>12 часов</span>
+                                <strong>950 USD</strong>
+                            </div>
+                            <div class="profile__price-item">
+                                <span>День</span>
+                                <strong>1400 USD</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__section-col-2">
+                    <div class="profile__usser-data">
+                        <div class="profile__usser-data-view">
+                            <span>Просмотров</span>
+                            <strong>341</strong>
+                        </div>
+                        <div class="profile__usser-data-reg">
+                            <span>Зарегистрирован</span>
+                            <strong>17.09.2020</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="profile__info">
         <div class="container">
-            <div class="profile__section-title">profile__info</div>
+            <div class="profile__info-row">
+                <div class="profile__info-box">
+                    <div class="profile__section-title">Данные</div>
+                    <div class="profile__info-desc">
+                        <ul>
+                            <li>
+                                <small>Страна</small>
+                                <span>Россия</span>
+                            </li>
+                            <li>
+                                <small>Город</small>
+                                <span>Симферополь</span>
+                            </li>
+                            <li>
+                                <small>Национальность</small>
+                                <span>Русский</span>
+                            </li>
+                            <li>
+                                <small>Возраст</small>
+                                <span>27</span>
+                            </li>
+                            <li>
+                                <small>Ориентация</small>
+                                <span>Натурал</span>
+                            </li>
+                            <li>
+                                <small>Рост</small>
+                                <span>190 см</span>
+                            </li>
+                            <li>
+                                <small>Вес</small>
+                                <span>93 кг</span>
+                            </li>
+                            <li>
+                                <small>Волосы</small>
+                                <span>Красный</span>
+                            </li>
+                            <li>
+                                <small>Глаза</small>
+                                <span>Серые</span>
+                            </li>
+                            <li>
+                                <small>Встречается С</small>
+                                <span>Девушки</span>
+                            </li>
+                            <li>
+                                <small>Языки</small>
+                                <span>Английский, Русский</span>
+                            </li>
+                            <li>
+                                <small>Готов Поехать</small>
+                                <span>Европа, Азия</span>
+                            </li>
+                            <li>
+                                <small>Люблю</small>
+                                <span>Щекотка, Волосы На Теле</span>
+                            </li>
+                            <li>
+                                <small>Доступен Для</small>
+                                <span>Эскорт, Массаж</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile__info-box">
+                    <div class="profile__section-title">О Себе</div>
+                    <div class="profile__info-desc">
+                        <p>Мужественный, уважительный, дружелюбный, сдержанный парень, родом из Чехии. Имеет хорошее воспитание и высшее образование со степенью магистра.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="video" class="profile__section profile__video">
@@ -185,6 +305,48 @@ require_once 'layouts/nav.php'; ?>
     <section class="profile__gallery">
         <div class="container">
             <div class="profile__section-title">Фото</div>
+            <div class="profile__gallery-row">
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/model.jpg" alt="">
+                    </a>
+                </div>
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model-1.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/min/model-1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model-2.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/min/model-2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model-3.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/min/model-3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model-4.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/min/model-4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model-5.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/min/model-5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model-6.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/min/model-6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="profile__gallery-item">
+                    <a href="/assets/images/page/model/model-7.jpg" data-fancybox="gallery">
+                        <img src="/assets/images/page/model/min/model-7.jpg" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -536,7 +698,17 @@ require_once 'layouts/nav.php'; ?>
                     <span>Хочу, чтобы мне перезвонил менеджер</span>
                 </div>
 
-                <textarea placeholder="Комментарий к заявке. Уточните ваш бюджет, дополнительные пожелания и т.д."></textarea>
+                <div class="textarea">
+                    <div class="field__lang">
+                        <div class="field__lang-item en">
+                            <img src="/assets/files/icons/svg/icon--flag-en.svg" alt="">
+                        </div>
+                        <div class="field__lang-item rus active">
+                            <img src="/assets/files/icons/svg/icon--flag-russia.svg" alt="">
+                        </div>
+                    </div>
+                    <textarea placeholder="Комментарий к заявке. Уточните ваш бюджет, дополнительные пожелания и т.д."></textarea>
+                </div>
             </form>
         </div>
         <div class="popup__footer">
@@ -553,8 +725,17 @@ require_once 'layouts/nav.php'; ?>
         </div>
         <div class="popup__content">
             <form action="">
-                <textarea placeholder="Напишите свой отзыв о Nata Lee">Я могу сказать вам, что Таня не только самая красивая молодая женщина на этой планете, но у нее есть личность, за которую можно умереть, и замечательный добрый человек, который будет рядом. Я бы проводил время с ней снова и снова. Спасибо за то, что вы были замечательным компаньоном и за то, что подарили мне такое прекрасное время. Пока мы не встретимся снова х</textarea>
-                
+                <div class="textarea">
+                    <div class="field__lang">
+                        <div class="field__lang-item en">
+                            <img src="/assets/files/icons/svg/icon--flag-en.svg" alt="">
+                        </div>
+                        <div class="field__lang-item rus active">
+                            <img src="/assets/files/icons/svg/icon--flag-russia.svg" alt="">
+                        </div>
+                    </div>
+                    <textarea placeholder="Напишите свой отзыв о Nata Lee">Я могу сказать вам, что Таня не только самая красивая молодая женщина на этой планете, но у нее есть личность, за которую можно умереть, и замечательный добрый человек, который будет рядом. Я бы проводил время с ней снова и снова. Спасибо за то, что вы были замечательным компаньоном и за то, что подарили мне такое прекрасное время. Пока мы не встретимся снова х</textarea>
+                </div>
                 <div class="rating">
                     <div class="rating__wrap">
                         <span>Добавить оценку модели</span>
@@ -587,12 +768,22 @@ require_once 'layouts/nav.php'; ?>
         </div>
         <div class="popup__content">
             <form action="">
-                <textarea placeholder="Сохраните для себя информацию о модели"></textarea>
+                <div class="textarea">
+                    <div class="field__lang">
+                        <div class="field__lang-item en">
+                            <img src="/assets/files/icons/svg/icon--flag-en.svg" alt="">
+                        </div>
+                        <div class="field__lang-item rus active">
+                            <img src="/assets/files/icons/svg/icon--flag-russia.svg" alt="">
+                        </div>
+                    </div>
+                    <textarea placeholder="Сохраните для себя информацию о модели"></textarea>
+                </div>
             </form>
         </div>
         <div class="popup__footer">
             <button class="btn btn-accent jsSaveNote">Сохранить</button>
-            <div class="btn btn__del jsClearNote">
+            <div class="btn btn-icon btn-del jsClearNote">
                 <svg><use xlink:href="/assets/files/sprite.svg#icon--close-del"/></svg>
                 Удалить
             </div>
@@ -608,7 +799,17 @@ require_once 'layouts/nav.php'; ?>
         </div>
         <div class="popup__content">
             <form action="">
-                <textarea placeholder="Опишите ваше недовольство или жалобу">Это качество сегодня особенно востребовано. Джентльменов стало меньше, поэтому тот, кто соблюдает правила этикета, имее|</textarea>
+                <div class="textarea">
+                    <div class="field__lang">
+                        <div class="field__lang-item en">
+                            <img src="/assets/files/icons/svg/icon--flag-en.svg" alt="">
+                        </div>
+                        <div class="field__lang-item rus active">
+                            <img src="/assets/files/icons/svg/icon--flag-russia.svg" alt="">
+                        </div>
+                    </div>
+                    <textarea placeholder="Опишите ваше недовольство или жалобу">Это качество сегодня особенно востребовано. Джентльменов стало меньше, поэтому тот, кто соблюдает правила этикета, имее|</textarea>
+                </div>
             </form>
         </div>
         <div class="popup__footer">

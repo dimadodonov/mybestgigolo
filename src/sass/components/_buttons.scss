@@ -12,6 +12,10 @@
     cursor: pointer;
     min-height: 50px;
 
+    @include lg-block() {
+        padding: 15px 20px;
+    }
+
     @include xs-block() {
         min-width: auto;
         padding: 10px 15px;
@@ -119,11 +123,8 @@
         border-radius: 25px;
     }
 
-    &-signin {
-    }
-
     &-signup {
-        width: 100%;
+        width: calc(100% - 150px);
         color: $color-accent;
 
         &:hover {
@@ -149,16 +150,6 @@
         }
     }
 
-    &-submit {
-        background-color: #f53a66;
-        color: #fff;
-
-        &:hover {
-            background-color: #ce274e;
-            color: #fff;
-        }
-    }
-
     &-profile {
         height: 40px;
         padding: 6px 25px;
@@ -176,35 +167,91 @@
 
             fill: #000;
         }
+
+        span {
+            display: flex;
+        }
     }
 
     &-mess {
-        background-color: #f53a66;
+        @include xs-block() {
+            width: calc(100% - 64px);
+            max-width: 100%;
+        }
     }
 
     &-favorite {
         position: relative;
-        width: 50px;
-        margin-right: 10px;
         margin-left: 10px;
-        border: 1px solid #f53a66;
+        padding: 28px 32px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
         cursor: pointer;
-        min-height: 50px;
 
         &::before {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             transform: translate(-50%, -50%);
             background-image: url('/assets/files/icons/svg/icon--favorite.svg');
-            background-size: cover;
+            background-size: 24px 24px;
         }
 
         &.active::before {
             background-image: url('/assets/files/icons/svg/icon--favorite-active.svg');
+            background-size: 24px 24px;
+        }
+    }
+
+    &-reviews,
+    &-hide {
+        margin-right: 10px;
+        color: $color-accent;
+
+        svg {
+            fill: $color-accent;
+        }
+
+        span {
+            white-space: nowrap;
+        }
+    }
+
+    &-quote {
+        position: relative;
+        margin-right: 10px;
+        padding: 20px;
+        transition: $trs;
+        color: $color-accent;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-text--white;
+        }
+
+        &.on::before {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+            border-width: 0 10px 20px;
+            border-style: solid;
+            border-color: transparent transparent $color-accent;
+        }
+    }
+
+    &-del {
+        margin-left: 10px;
+        color: $color-accent;
+
+        svg {
+            fill: $color-accent;
         }
     }
 
@@ -235,9 +282,5 @@
             transition: $trs;
             color: $color-text--white;
         }
-    }
-
-    &-width {
-        display: flex;
     }
 } //.btn
