@@ -46,8 +46,113 @@ require_once 'layouts/nav.php'; ?>
         </div>
     </div>
     <section class="profile__head">
-        <div class="container">
-            <div class="profile__section-title">profile__head</div>
+        <!-- Swiper -->
+        <div class="profile-slider swiper-container profile-slider-container">
+        
+                            
+            <div class="profile__bage">
+                <div class="profile__bage-item pornstar">
+                    <span>PORN STAR</span>
+                </div>
+                <div class="profile__bage-item new">
+                    <span>new</span>
+                </div>
+                <div class="profile__bage-item top">
+                    <span>top</span>
+                </div>
+                <div class="profile__bage-item vip">
+                    <span>vip</span>
+                </div>
+            </div>
+
+            <div class="profile__meta">
+                <div class="profile__realphoto">
+                    <div class="profile__realphoto-title">Реальные фото</div>
+                    <div class="profile__realphoto-count"><ins>+14</ins>  фотографий</div>
+                </div>
+
+                <div class="profile__name">Джон Кортахарена</div>
+                <div class="profile__city">Россия (Москва)</div>
+            </div> 
+
+            <a href="https://www.youtube.com/watch?v=3CxtK7-XtE0" data-fancybox="gallery-video" class="profile__video-btn">
+                <span>СМОТРЕТЬ МОЕ ВИДЕО</span>
+                <div class="profile__video-btn-play"></div>
+            </a>
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="/assets/images/page/model/model.jpg" data-fancybox="gallery">
+                        <div class="profile-slide">
+                            <img src="/assets/images/page/model/model.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/assets/images/page/model/item-6.jpg" data-fancybox="gallery">
+                        <div class="profile-slide">
+                            <img src="/assets/images/page/model/item-6.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/assets/images/page/model/model-6.jpg" data-fancybox="gallery">
+                        <div class="profile-slide">
+                            <img src="/assets/images/page/model/model-6.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/assets/images/page/model/model-4.jpg" data-fancybox="gallery">
+                        <div class="profile-slide">
+                            <img src="/assets/images/page/model/model-4.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/assets/images/page/model/model-1.jpg" data-fancybox="gallery">
+                        <div class="profile-slide">
+                            <img src="/assets/images/page/model/model-1.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/assets/images/page/model/model-6.jpg" data-fancybox="gallery">
+                        <div class="profile-slide">
+                            <img src="/assets/images/page/model/model-6.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-btn-next"></div>
+            <div class="swiper-btn-prev"></div>
+        </div>
+
+        <div class="profile__btn">
+            <div class="container">
+                <div class="profile__btn-row">
+                    <div>
+                        <div class="btn-mess">Отправить сообщение</div>
+                        <div class="btn-favorite"></div>
+                    </div>
+                    <div>
+                        <div class="btn-reviews">Оставить отзыв</div>
+                        <div class="btn-hide">Скрыть модель</div>
+                    </div>
+                    <div>
+                        <div class="">Изменить заметку</div>
+                        <div class="btn-beef">Пожаловаться</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile__quote">
+            <div class="container">
+                <p>Если честно, то я скептически отношусь к подобного рода предложениям…</p>
+            </div>
         </div>
     </section>
     <section class="profile__price">

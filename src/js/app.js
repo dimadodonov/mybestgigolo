@@ -177,6 +177,17 @@ const App = {
         });
     },
     slider() {
+        var swiper = new Swiper('.profile-slider', {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.swiper-btn-next',
+                prevEl: '.swiper-btn-prev',
+            },
+        });
+
         var swiper = new Swiper('.page-news-slider', {
             slidesPerView: 1,
             spaceBetween: 30,
