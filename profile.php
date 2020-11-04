@@ -308,7 +308,7 @@ require_once 'layouts/nav.php'; ?>
             <div class="profile__gallery-row">
                 <div class="profile__gallery-item">
                     <a href="/assets/images/page/model/model.jpg" data-fancybox="gallery">
-                        <img src="/assets/images/page/model/model.jpg" alt="">
+                        <img src="/assets/images/page/model/min/model.jpg" alt="">
                     </a>
                 </div>
                 <div class="profile__gallery-item">
@@ -354,7 +354,7 @@ require_once 'layouts/nav.php'; ?>
         <div class="container">
             <div class="profile__section-title">
                 <div><ins>5</ins> Отзывов</div>
-                <small>+ Оставить отзыв</small>
+                <small class="btn-reviews">+ Оставить отзыв</small>
             </div>
 
             <div class="reviews__row">

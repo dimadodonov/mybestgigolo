@@ -78,10 +78,14 @@
     <div class="footer__copy">
         <div class="container">
             <div class="footer__copy-wrap">
-                <a href="/"><img src="/assets/files/icons/svg/logo.svg" alt=""></a>
-                <div class="footer__copy-text">© 2020 One Night, Условия использования. Все рекламодатели дали согласие на то, что им исполнилось 18 лет.</div>
+                <div class="footer__copy-wrap">
+                    <a href="/" class="footer__copy-logo"><img src="/assets/files/icons/svg/logo.svg" alt=""></a>
+                    <div class="footer__copy-text">© 2020 One Night, Условия использования. <br>Все рекламодатели дали согласие на то, что им исполнилось 18 лет.</div>
+                </div>
+                <div class="footer__copy-payments">
+                    <img src="/assets/files/icons/svg/icon--payments.svg" alt="">
+                </div>
             </div>
-
         </div>
     </div>
 </footer>
