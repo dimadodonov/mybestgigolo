@@ -235,16 +235,45 @@
             align-items: center;
 
             @include sm-block() {
-                width: 100%;
                 margin-bottom: 15px;
+            }
+
+            @include xs-block() {
+                width: 100%;
             }
 
             & + .profile__btn-col {
                 margin-left: 10px;
 
-                @include sm-block() {
+                @include xs-block() {
                     margin-left: 0;
                 }
+            }
+        }
+
+        .btn-quote,
+        .btn-beef,
+        .btn-reviews,
+        .btn-hide {
+            @include xs-block() {
+                width: 50%;
+            }
+        }
+
+        .btn-hide {
+            margin-right: 0;
+        }
+
+        .btn-quote,
+        .btn-beef {
+            @include xs-block() {
+                display: flex;
+                justify-content: center;
+                font-size: 14px;
+            }
+
+            @include i5-block() {
+                margin-right: 0;
             }
         }
     }
@@ -258,7 +287,7 @@
         border-radius: 3px;
         background: $color-accent;
 
-        @include xs-block() {
+        @include sm-block() {
             margin-top: 5px;
         }
 
@@ -706,6 +735,16 @@
             height: 157px;
             margin-top: 1px;
             margin-left: 1px;
+
+            @include md-block() {
+                width: calc(20% - 1px);
+                height: auto;
+            }
+
+            @include sm-block() {
+                width: calc(25% - 1px);
+                height: auto;
+            }
 
             @include xs-block() {
                 width: calc(33.333333% - 1px);
