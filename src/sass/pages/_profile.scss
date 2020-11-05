@@ -809,7 +809,6 @@
     .swiper-btn-next,
     .swiper-btn-prev {
         @include md-block() {
-            display: none;
         }
     }
 

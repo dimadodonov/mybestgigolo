@@ -118,17 +118,27 @@
             margin-left: 0;
         }
 
-        &:hover img,
+        @include xs-block() {
+            right: initial;
+        }
+
+        &:hover svg,
         &:hover ins {
             opacity: 1;
             color: rgba(255, 255, 255, 1);
         }
 
-        img {
+        svg {
             opacity: 0.3;
             width: 24px;
             height: 24px;
             transition: $trs;
+            fill: rgba(255, 255, 255, 1);
+
+            @include xs-block() {
+                opacity: 1;
+                fill: rgba($color-accent, 1);
+            }
         }
 
         ins {
@@ -136,6 +146,10 @@
             transition: $trs;
             color: rgba(255, 255, 255, 0.2);
             text-decoration: none;
+
+            @include xs-block() {
+                display: none;
+            }
         }
     }
 

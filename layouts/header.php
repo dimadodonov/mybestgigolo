@@ -4,6 +4,10 @@
             <div class="header__logo logo">
                 <a href="/"><img src="/assets/files/icons/svg/logo.svg" alt=""></a>
             </div>
+            <div class="header__search">
+                <svg><use xlink:href="/assets/files/sprite.svg#icon--search"/></svg>
+                <ins>Поиск</ins>
+            </div>
             <div class="mob-menu">
                 <div id="hamburger__menu" class="hamburger__menu"></div>
             </div>
@@ -30,11 +34,6 @@
                     </div>
                 </div>
                 </div>
-            </div>
-
-            <div class="header__search">
-                <img src="/assets/files/icons/svg/icon--search.svg" alt="">
-                <ins>Поиск</ins>
             </div>
 
             <div class="btn-group">

@@ -16,6 +16,10 @@
             background: $color-accent;
             cursor: pointer;
 
+            @include xs-block() {
+                background: transparent;
+            }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -26,6 +30,17 @@
                 transform: translate(-50%, -50%);
                 background-image: url('/assets/files/icons/svg/icon--swiper-arrow.svg');
                 background-size: cover;
+
+                @include xs-block() {
+                    width: 34px;
+                    height: 34px;
+                    background-image: url('/assets/files/icons/svg/icon--swiper-arrow-m.svg');
+                }
+
+                @include i5-block() {
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
 
