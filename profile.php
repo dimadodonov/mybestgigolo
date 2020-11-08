@@ -210,6 +210,32 @@ require_once 'layouts/nav.php'; ?>
             </div>
         </div>
     </section>
+    
+    <section class="profile__section profile__contact">
+        <div class="container">
+            <div class="profile__contact-row">
+                <div class="profile__contact-title">Контакты:</div>
+                
+                <div class="profile__contact-inner">
+                    <div class="profile__contact-phone">+7 (999) 999-99-99</div>
+                    <div class="profile__contact-messenger">
+                        <div class="profile__contact-item">Calls</div>
+                        <div class="profile__contact-item"><ins>•</ins></div>
+                        <div class="profile__contact-item">SMS</div>
+                        <div class="profile__contact-item"><ins>•</ins></div>
+                        <div class="profile__contact-item">Whatsapp</div>
+                    </div>
+                    <div class="profile__contact-lang">
+                        <div class="profile__contact-item">English</div>
+                        <div class="profile__contact-item"><ins>•</ins></div>
+                        <div class="profile__contact-item">Russian</div>
+                        <div class="profile__contact-item"><ins>•</ins></div>
+                        <div class="profile__contact-item">French</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="profile__info">
         <div class="container">
             <div class="profile__info-row">

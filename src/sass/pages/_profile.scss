@@ -510,6 +510,120 @@
         }
     }
 
+    &__contact {
+        position: relative;
+        margin-bottom: 30px;
+
+        &-row {
+            display: flex;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            @include lg-block() {
+                justify-content: center;
+            }
+
+            @include sm-block() {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+        }
+
+        &-inner {
+            display: flex;
+            align-items: center;
+
+            @include sm-block() {
+                flex-direction: column;
+                width: 100%;
+                padding: 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                background: #15151e;
+            }
+        }
+
+        &-phone {
+            margin-right: 15px;
+            margin-left: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 24px;
+            line-height: 29px;
+
+            @include md-block() {
+                font-size: 18px;
+                line-height: normal;
+            }
+
+            @include sm-block() {
+                font-size: 24px;
+                line-height: 29px;
+            }
+
+            @include i5-block() {
+                font-size: 20px;
+                line-height: normal;
+            }
+        }
+
+        &-messenger,
+        &-lang {
+            position: relative;
+            display: flex;
+        }
+
+        &-messenger {
+            padding-right: 15px;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+            @include sm-block() {
+                padding-right: 0;
+                border-right: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        &-item {
+            position: relative;
+            display: flex;
+            margin-left: 15px;
+            padding: 10px 0;
+
+            @include md-block() {
+                font-size: 13px;
+                line-height: normal;
+            }
+
+            @include sm-block() {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            &:first-child {
+                margin-left: 15px;
+            }
+
+            ins {
+                color: rgba(255, 255, 255, 0.3);
+                text-decoration: none;
+            }
+        }
+
+        &-title {
+            margin-right: 15px;
+            color: #fff;
+            font-family: $f-medium;
+            font-size: 24px;
+            line-height: 29px;
+
+            @include sm-block() {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
     &__section {
         position: relative;
 

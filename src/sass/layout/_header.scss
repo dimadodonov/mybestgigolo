@@ -114,11 +114,6 @@
         cursor: pointer;
 
         @include md-block() {
-            right: 15px;
-            margin-left: 0;
-        }
-
-        @include xs-block() {
             right: initial;
         }
 
@@ -135,7 +130,7 @@
             transition: $trs;
             fill: rgba(255, 255, 255, 1);
 
-            @include xs-block() {
+            @include md-block() {
                 opacity: 1;
                 fill: rgba($color-accent, 1);
             }
@@ -147,7 +142,7 @@
             color: rgba(255, 255, 255, 0.2);
             text-decoration: none;
 
-            @include xs-block() {
+            @include md-block() {
                 display: none;
             }
         }
